@@ -1,0 +1,57 @@
+#title {
+  background-color: teal;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  /* TODO: Replace with teal color, and picture of the club"
+  /* To avoid needing a wide image, perhaps combine 3 of the previous
+  yearbook pictures? Should be appropriate for */
+
+  width: 75vw;
+  float: right;
+}
+
+#side-menu-overall {
+  height: 100%;
+  width: 15vw;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+
+  top: 0px;
+  left: 0px;
+  background-color: #585858;
+}
+
+.side-menu-item {
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1.5vw;
+}
+
+.side-menu-item:link {
+  color: #20A0A0;
+}
+
+.side-menu-item:visited {
+  color: #20A0A0;
+}
+
+.side-menu-item:active {
+  color: #008080;
+}
+
+.side-menu-item:hover {
+  font-size: 1.75vw;
+}
+
+.shared-page-body {
+  width: 80vw;
+  float: right;
+}

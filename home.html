@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <title>BCMC | Home</title>
+    <link rel="stylesheet" type="text/css" href="css/shared.css">
+    <script src="js/shared.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2 id="sidebar" onclick="openSideBar()">
+      &plus;
+    </h2>
+
+    <h1 id="home-title">BASIS CHANDLER<br>MATHCOUNTS CLUB</b></h1>
+
+    <nav id="home-side-menu">
+      <h3 onclick="closeSideBar()" id="closeButton">
+        &times;
+      </h3>
+        <a href="home.html" class="side-menu-item home-side-menu-item">
+            Home
+        </a><br>
+        <a href="resources.html" class="side-menu-item home-side-menu-item">
+          Resources
+        </a><br>
+        <a href="news.html" class="side-menu-item home-side-menu-item">
+          News
+        </a><br>
+        <a href="about.html" class="side-menu-item home-side-menu-item">
+          About
+        </a>
+    </nav>
+
+    <style>
+      #home-title {
+        padding-top: 10%;
+
+        width: 100%;
+        font-size: 6vw;
+        text-align: center;
+        vertical-align: middle;
+
+        color: #006060;
+      }
+
+      #sidebar {
+        position: fixed;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 50px;
+
+        cursor: pointer;
+      }
+
+      #home-side-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        padding-top: 20px;
+
+        top: 0px;
+        left: 0px;
+        transition: 0.5s;
+        background-color: #666666;
+      }
+
+      #closeButton {
+        display: block;
+
+        margin-top: 20px;
+        margin-right: 60px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+
+        font-size: 50px;
+        color: #000000;
+      }
+
+      #closeButton:hover {
+        color: #20A0A0;
+        cursor: pointer;
+      }
+
+      .home-side-menu-item {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+        font-size: 25px;
+        display: block;
+        transition: 0.1s;
+      }
+
+      .home-side-menu-item:hover {
+        font-size: 30px;
+      }
+
+    </style>
+
+    <script>
+      function openSideBar() {
+        document.getElementById("home-side-menu").style.width = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.2)";
+      }
+      function closeSideBar() {
+        document.getElementById("home-side-menu").style.width = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>
