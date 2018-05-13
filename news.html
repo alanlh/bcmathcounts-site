@@ -7,7 +7,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <nav id="side-menu-overall">
+    <script>
+      $(document).ready(function() {
+          $("#navigation").load("navbar.html");
+        }, function() {
+          alert("Load performed");
+      });
+    </script>
+    <!-- <nav id="side-menu-overall">
       <a href="index.html" class="side-menu-item">
         Home
       </a><br>
@@ -20,7 +27,7 @@
       <a href="about.html" class="side-menu-item">
         About
       </a><br>
-    </nav>
+    </nav> -->
     <div id="navigation"></div>
     <h1 id="title">News</h1>
 
@@ -28,11 +35,29 @@
         <article class="news-article">
           <a href="index.html">
             <div>
-              <p class="news-article-title">
+              <h4 class="news-article-title">
                 Preparing for the 2018-2019 School Year
-              </p>
+              </h4>
               <p class="news-article-date">
                 May 12, 2018
+              </p><br>
+              <p class="news-article-author">
+                A Person
+              </p>
+            </div>
+          </a>
+        </article>
+        <article class="news-article">
+          <a href="index.html">
+            <div>
+              <h4 class="news-article-title">
+                Preparing for the 2018-2019 School Year
+              </h4>
+              <p class="news-article-date">
+                May 12, 2018
+              </p><br>
+              <p class="news-article-author">
+                A Person
               </p>
             </div>
           </a>
