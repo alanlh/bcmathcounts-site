@@ -13,7 +13,8 @@
     <h1 id="home-title">BASIS CHANDLER<br>MATHCOUNTS CLUB</h1>
 
     <nav id="home-side-menu">
-      <h3 onclick="closeSideBar()" id="closeButton">
+      <h3 onclick="closeSideBar()" id="closeButton"
+          class="side-menu-item home-side-menu-item">
         &times;
       </h3>
         <a href="index.html" class="side-menu-item home-side-menu-item">
@@ -22,12 +23,18 @@
         <a href="src/html/resources.html" class="side-menu-item home-side-menu-item">
           Resources
         </a><br>
+        <a href="src/html/accolades.html" class="side-menu-item home-side-menu-item">
+          Accolades
+        </a><br>
         <a href="src/html/news.html" class="side-menu-item home-side-menu-item">
           News
         </a><br>
         <a href="src/html/about.html" class="side-menu-item home-side-menu-item">
           About
         </a>
+        <a href="src/html/potw.html" class="side-menu-item home-side-menu-item">
+          Problem of<br>the Week
+        </a><br>
     </nav>
 
     <style>
@@ -84,13 +91,13 @@
 
       .home-side-menu-item {
         width: 100%;
-        padding-left: 30px;
-        padding-right: 20px;
-        padding-top: 20px;
-        padding-bottom: 10px;
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-top: 5px;
+        margin-bottom: 40px;
 
         font-size: 25px;
-        display: block;
+        display: inline-block;
         transition: 0.1s;
       }
 
@@ -98,11 +105,66 @@
         font-size: 30px;
       }
 
+    @media screen and (max-width: 600px) {
+      #home-side-menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        overflow-x: hidden;
+        padding-top: 20px;
+
+        top: 0px;
+        left: 0px;
+        transition: 0.5s;
+        background-color: #666666;
+      }
+
+      #closeButton {
+        display: block;
+
+        margin-top: 10px;
+        margin-right: 60px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+        font-size: 10vw;
+        color: #000000;
+      }
+
+      #closeButton:hover {
+        color: #20A0A0;
+        cursor: pointer;
+      }
+
+      .home-side-menu-item {
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-top: 0;
+        margin-bottom: 5vw;
+
+        font-size: 5vw;
+        display: block;
+        transition: 0.1s;
+      }
+
+      .home-side-menu-item:hover {
+        font-size: 6vw;
+      }
+    }
+
     </style>
 
     <script>
       function openSideBar() {
-        document.getElementById("home-side-menu").style.width = "250px";
+        var width = document.documentElement.clientWidth;
+        if (width > 600) {
+          document.getElementById("home-side-menu").style.width = "250px";
+        } else {
+          document.getElementById("home-side-menu").style.width = "100vw";
+        }
+
         document.body.style.backgroundColor = "rgba(0,0,0,0.2)";
       }
       function closeSideBar() {
