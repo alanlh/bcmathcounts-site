@@ -61,6 +61,8 @@
     background-color: teal;
     padding-bottom: 20px;
     padding-top: 20px;
+
+    width: 80%;
     /* TODO: Replace with teal color, and picture of the club"
     /* To avoid needing a wide image, perhaps combine 3 of the previous
     yearbook pictures? Should be appropriate for */
@@ -68,6 +70,7 @@
 
   #side-menu-overall {
     width: 100vw;
+    height: auto;
 
     position: relative;
     display: block;
@@ -102,5 +105,7 @@
 
     text: 2vw;
     overflow: auto;
+
+    width: 85%
   }
 }
