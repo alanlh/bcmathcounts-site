@@ -109,3 +109,15 @@
     width: 85%
   }
 }
+
+/* General links */
+a {
+  color: #20A0A0;
+  text-decoration: none;
+}
+a:visited {
+  color: #20A0A0;
+}
+a:hover {
+  color: #2AD5D5;
+}
