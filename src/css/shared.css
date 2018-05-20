@@ -1,9 +1,11 @@
 #title {
-  background-color: teal;
+  background-color: #008080;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
   padding-top: 40px;
+
+  margin-right: 10px;
   /* TODO: Replace with teal color, and picture of the club"
   /* To avoid needing a wide image, perhaps combine 3 of the previous
   yearbook pictures? Should be appropriate for */
@@ -22,6 +24,8 @@
   top: 0px;
   left: 0px;
   background-color: #585858;
+
+  box-sizing: border-box;
 }
 
 .side-menu-item {
@@ -52,20 +56,28 @@
 }
 
 .shared-page-body {
-  width: 80vw;
+  width: 70vw;
   float: right;
+
+  margin-right: 10%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   #title {
     background-color: teal;
     padding-bottom: 20px;
     padding-top: 20px;
 
-    width: 80%;
+    padding-left: 40px;
+    padding-right: 10px;
+
+    float: left;
+    width: 100%;
     /* TODO: Replace with teal color, and picture of the club"
     /* To avoid needing a wide image, perhaps combine 3 of the previous
     yearbook pictures? Should be appropriate for */
+
+    box-sizing: border-box;
   }
 
   #side-menu-overall {
@@ -106,7 +118,7 @@
     text: 2vw;
     overflow: auto;
 
-    width: 85%
+    width: 85%;
   }
 }
 
