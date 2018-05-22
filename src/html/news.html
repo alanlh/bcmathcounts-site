@@ -6,44 +6,24 @@
     <link rel="stylesheet" type="text/css" href="../css/news.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   </head>
-  <body>
+  <body ng-app="news-top">
     <script src="../js/shared.js"></script>
+    <script src="../js/news-top.js"></script>
     <div id="navigation"></div>
     <h1 id="title">News</h1>
 
-    <div class="shared-page-body">
-        <article class="news-article">
-          <a href="../../index.html">
-            <div>
-              <h4 class="news-article-title">
-                Preparing for the 2018-2019 School Year
-              </h4>
-              <p class="news-article-date">
-                May 12, 2018
-              </p><br>
-              <p class="news-article-author">
-                A Person
-              </p>
-            </div>
-          </a>
-        </article>
-        <article class="news-article">
-          <a href="news/0000.html">
-            <div>
-              <h4 class="news-article-title">
-                The Website Is Online!
-              </h4>
-              <p class="news-article-date">
-                May 19, 2018
-              </p><br>
-              <p class="news-article-author">
-                Alan Hu
-              </p>
-            </div>
-          </a>
-        </article>
+    <div class="shared-page-body" ng-controller="news-articles">
+      <article class="news-article" ng-repeat="news in newsArchive">
+        <a ng-href="../html/news/{{news.url}}.html">
+          <div>
+            <h4 class="news-article-title">{{news.title}}</h4>
+            <p class="news-article-date">{{news.date}}</p><br>
+            <p class="news-article-author">By {{news.author}}</p>
+          </div>
+        </a>
+      </article>
     </div>
-
   </body>
 </html>
